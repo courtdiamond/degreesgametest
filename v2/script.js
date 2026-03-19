@@ -244,49 +244,49 @@ const DAILY_PUZZLES = [
       {
         correct: { name: "Kate Winslet", connection: "Co-starred in Titanic (1997)" },
         decoys: [
-          { name: "Brad Pitt", connection: "Co-starred in Once Upon a Time in Hollywood" },
-          { name: "Tom Hanks", connection: "Co-starred in Catch Me If You Can" },
-          { name: "Margot Robbie", connection: "Co-starred in Wolf of Wall Street" }
+          { name: "Brad Pitt", connection: "Co-starred in Once Upon a Time in Hollywood (2019)" },
+          { name: "Tom Hanks", connection: "Co-starred in Catch Me If You Can (2002)" },
+          { name: "Margot Robbie", connection: "Co-starred in The Wolf of Wall Street (2013)" }
         ]
       },
       {
         correct: { name: "Jude Law", connection: "Co-starred in The Holiday (2006)" },
         decoys: [
-          { name: "Jim Carrey", connection: "Co-starred in Eternal Sunshine" },
-          { name: "Ralph Fiennes", connection: "Co-starred in The Reader" },
-          { name: "Cate Blanchett", connection: "Fellow British acting royalty" }
+          { name: "Jim Carrey", connection: "Co-starred in Eternal Sunshine of the Spotless Mind (2004)" },
+          { name: "Ralph Fiennes", connection: "Co-starred in The Reader (2008)" },
+          { name: "Michael Fassbender", connection: "Co-starred in Steve Jobs (2015)" }
         ]
       },
       {
         correct: { name: "Robert Downey Jr.", connection: "Co-starred in Sherlock Holmes (2009)" },
         decoys: [
-          { name: "Nicole Kidman", connection: "Fellow award-winning star" },
-          { name: "Matt Damon", connection: "Fellow A-list leading man" },
-          { name: "Hugh Grant", connection: "Fellow British romantic lead" }
+          { name: "Matt Damon", connection: "Co-starred in The Talented Mr. Ripley (1999)" },
+          { name: "Nicole Kidman", connection: "Co-starred in Cold Mountain (2003)" },
+          { name: "Natalie Portman", connection: "Co-starred in Closer (2004)" }
         ]
       },
       {
-        correct: { name: "Jon Favreau", connection: "Directed Downey in Iron Man (2008)" },
+        correct: { name: "Jon Favreau", connection: "Directed Iron Man (2008), also played Happy Hogan" },
         decoys: [
-          { name: "Chris Evans", connection: "Fellow Marvel Avenger" },
-          { name: "Scarlett Johansson", connection: "Fellow Marvel star" },
-          { name: "Gwyneth Paltrow", connection: "Played Pepper Potts in Iron Man" }
+          { name: "Chris Evans", connection: "Co-starred in The Avengers (2012)" },
+          { name: "Gwyneth Paltrow", connection: "Played Pepper Potts in Iron Man (2008)" },
+          { name: "Scarlett Johansson", connection: "Co-starred in Iron Man 2 (2010)" }
         ]
       },
       {
-        correct: { name: "Will Ferrell", connection: "Favreau directed Ferrell in Elf (2003)" },
+        correct: { name: "Will Ferrell", connection: "Directed Ferrell in Elf (2003)" },
         decoys: [
-          { name: "Vince Vaughn", connection: "Favreau's real-life best friend" },
-          { name: "Adam Sandler", connection: "Fellow comedy legend" },
-          { name: "Ben Stiller", connection: "Fellow comedy A-lister" }
+          { name: "Vince Vaughn", connection: "Co-wrote and co-starred in Swingers (1996)" },
+          { name: "Donald Glover", connection: "Directed Glover as Simba in The Lion King (2019)" },
+          { name: "Seth Rogen", connection: "Directed Rogen as Pumbaa in The Lion King (2019)" }
         ]
       },
       {
-        correct: { name: "Elmo", connection: "Ferrell appeared on Sesame Street with Elmo" },
+        correct: { name: "Elmo", connection: "Appeared alongside Elmo on Sesame Street" },
         decoys: [
-          { name: "Big Bird", connection: "Another Sesame Street icon" },
-          { name: "Cookie Monster", connection: "Another beloved Muppet" },
-          { name: "Oscar the Grouch", connection: "Lives on Sesame Street too" }
+          { name: "John C. Reilly", connection: "Co-starred in Step Brothers (2008)" },
+          { name: "Mark Wahlberg", connection: "Co-starred in The Other Guys (2010)" },
+          { name: "Zooey Deschanel", connection: "Co-starred in Elf (2003)" }
         ]
       }
     ]
@@ -299,49 +299,49 @@ const DAILY_PUZZLES = [
       {
         correct: { name: "Jay-Z", connection: "Married since 2008" },
         decoys: [
-          { name: "Drake", connection: "Collaborated on music together" },
-          { name: "Kanye West", connection: "Former label partners" },
-          { name: "Pharrell Williams", connection: "Produced several of her hits" }
+          { name: "Kendrick Lamar", connection: "Collaborated on 'Freedom' from Lemonade (2016)" },
+          { name: "Ed Sheeran", connection: "Collaborated on 'Perfect Duet' (2017)" },
+          { name: "Donald Glover", connection: "Co-starred in The Lion King (2019)" }
         ]
       },
       {
-        correct: { name: "Baz Luhrmann", connection: "Jay-Z produced music for The Great Gatsby (2013)" },
+        correct: { name: "Baz Luhrmann", connection: "Jay-Z executive-produced the soundtrack for The Great Gatsby (2013)" },
         decoys: [
-          { name: "Martin Scorsese", connection: "Directed Jay-Z's concert film" },
-          { name: "Spike Lee", connection: "Frequent collaborator from Brooklyn" },
-          { name: "Tyler Perry", connection: "Fellow entertainment mogul" }
+          { name: "Kanye West", connection: "Collaborated on Watch the Throne album (2011)" },
+          { name: "Rihanna", connection: "Jay-Z signed Rihanna to Def Jam Records in 2005" },
+          { name: "Alicia Keys", connection: "Collaborated on 'Empire State of Mind' (2009)" }
         ]
       },
       {
-        correct: { name: "Leonardo DiCaprio", connection: "Luhrmann directed him in Romeo + Juliet (1996)" },
+        correct: { name: "Leonardo DiCaprio", connection: "Luhrmann directed Romeo + Juliet (1996) and The Great Gatsby (2013)" },
         decoys: [
-          { name: "Nicole Kidman", connection: "Luhrmann directed Moulin Rouge!" },
-          { name: "Ewan McGregor", connection: "Starred in Moulin Rouge!" },
-          { name: "Claire Danes", connection: "Co-starred in Romeo + Juliet" }
+          { name: "Nicole Kidman", connection: "Luhrmann directed Moulin Rouge! (2001)" },
+          { name: "Hugh Jackman", connection: "Luhrmann directed Australia (2008)" },
+          { name: "Ewan McGregor", connection: "Starred in Moulin Rouge! (2001)" }
         ]
       },
       {
         correct: { name: "Kate Winslet", connection: "Co-starred in Titanic (1997)" },
         decoys: [
-          { name: "Cate Blanchett", connection: "Fellow acclaimed actress" },
-          { name: "Marion Cotillard", connection: "Co-starred in Inception" },
-          { name: "Margot Robbie", connection: "Co-starred in Wolf of Wall Street" }
+          { name: "Cate Blanchett", connection: "Co-starred in The Aviator (2004)" },
+          { name: "Marion Cotillard", connection: "Co-starred in Inception (2010)" },
+          { name: "Jonah Hill", connection: "Co-starred in The Wolf of Wall Street (2013)" }
         ]
       },
       {
         correct: { name: "Judi Dench", connection: "Co-starred in Iris (2001)" },
         decoys: [
-          { name: "Emma Thompson", connection: "Fellow British acting legend" },
-          { name: "Helena Bonham Carter", connection: "Fellow British star" },
-          { name: "Maggie Smith", connection: "Fellow Dame of British cinema" }
+          { name: "Emma Thompson", connection: "Co-starred in Sense and Sensibility (1995)" },
+          { name: "Jim Carrey", connection: "Co-starred in Eternal Sunshine of the Spotless Mind (2004)" },
+          { name: "Idris Elba", connection: "Co-starred in The Mountain Between Us (2017)" }
         ]
       },
       {
         correct: { name: "William Shakespeare", connection: "Dench won an Oscar for Shakespeare in Love (1998)" },
         decoys: [
-          { name: "Charles Dickens", connection: "Classic British author" },
-          { name: "Jane Austen", connection: "Classic English novelist" },
-          { name: "Oscar Wilde", connection: "Legendary Irish playwright" }
+          { name: "Queen Victoria", connection: "Dench played Queen Victoria in Mrs Brown (1997)" },
+          { name: "M (James Bond)", connection: "Dench played M in seven James Bond films (1995–2012)" },
+          { name: "Philomena Lee", connection: "Dench starred as Philomena in Philomena (2013)" }
         ]
       }
     ]
@@ -354,49 +354,49 @@ const DAILY_PUZZLES = [
       {
         correct: { name: "Emily Blunt", connection: "Co-starred in Jungle Cruise (2021)" },
         decoys: [
-          { name: "Kevin Hart", connection: "Frequent comedy co-star" },
-          { name: "Zac Efron", connection: "Co-starred in Baywatch" },
-          { name: "Jason Statham", connection: "Co-starred in Hobbs & Shaw" }
+          { name: "Kevin Hart", connection: "Co-starred in Central Intelligence (2016)" },
+          { name: "Zac Efron", connection: "Co-starred in Baywatch (2017)" },
+          { name: "Jason Statham", connection: "Co-starred in Hobbs & Shaw (2019)" }
         ]
       },
       {
         correct: { name: "Matt Damon", connection: "Co-starred in The Adjustment Bureau (2011)" },
         decoys: [
-          { name: "Ryan Gosling", connection: "Fellow Hollywood heartthrob" },
-          { name: "Chris Hemsworth", connection: "Fellow action star" },
-          { name: "Bradley Cooper", connection: "Fellow leading man" }
+          { name: "John Krasinski", connection: "Married since 2010" },
+          { name: "Cillian Murphy", connection: "Co-starred in A Quiet Place Part II (2020)" },
+          { name: "Lin-Manuel Miranda", connection: "Co-starred in Mary Poppins Returns (2018)" }
         ]
       },
       {
-        correct: { name: "Ben Affleck", connection: "Best friends since childhood — wrote Good Will Hunting" },
+        correct: { name: "Ben Affleck", connection: "Co-wrote and co-starred in Good Will Hunting (1997)" },
         decoys: [
-          { name: "George Clooney", connection: "Fellow Batman actor" },
-          { name: "Mark Wahlberg", connection: "Fellow Boston-area star" },
-          { name: "Brad Pitt", connection: "Co-starred in Ocean's Thirteen" }
+          { name: "George Clooney", connection: "Co-starred in the Ocean's trilogy (2001–2007)" },
+          { name: "Christian Bale", connection: "Co-starred in Ford v Ferrari (2019)" },
+          { name: "Ridley Scott", connection: "Directed Damon in The Martian (2015)" }
         ]
       },
       {
-        correct: { name: "Jennifer Lopez", connection: "Married to Affleck (the famous 'Bennifer')" },
+        correct: { name: "Jennifer Lopez", connection: "Married in 2022 (the famous 'Bennifer' reunion)" },
         decoys: [
-          { name: "Shakira", connection: "Fellow global pop superstar" },
-          { name: "Madonna", connection: "Fellow pop culture icon" },
-          { name: "Rihanna", connection: "Fellow music mogul" }
+          { name: "Ana de Armas", connection: "Co-starred in Deep Water (2022)" },
+          { name: "Rosamund Pike", connection: "Co-starred in Gone Girl (2014)" },
+          { name: "Henry Cavill", connection: "Both played DC superheroes — Affleck as Batman, Cavill as Superman" }
         ]
       },
       {
         correct: { name: "Donatella Versace", connection: "Lopez wore the iconic Versace jungle dress at the 2000 Grammys" },
         decoys: [
-          { name: "Giorgio Armani", connection: "Another legendary Italian designer" },
-          { name: "Tom Ford", connection: "Famous fashion designer" },
-          { name: "Marc Jacobs", connection: "Acclaimed American designer" }
+          { name: "Shakira", connection: "Co-performed at the Super Bowl LIV Halftime Show (2020)" },
+          { name: "Constance Wu", connection: "Co-starred in Hustlers (2019)" },
+          { name: "Jane Fonda", connection: "Co-starred in Monster-in-Law (2005)" }
         ]
       },
       {
-        correct: { name: "Anna Wintour", connection: "Wintour and Versace are longtime collaborators at the Met Gala" },
+        correct: { name: "Anna Wintour", connection: "Versace and Wintour co-chair the annual Met Gala" },
         decoys: [
-          { name: "Victoria Beckham", connection: "Fashion designer and icon" },
-          { name: "Coco Chanel", connection: "Legendary fashion pioneer" },
-          { name: "Vera Wang", connection: "Iconic gown designer" }
+          { name: "Lady Gaga", connection: "Versace dressed Gaga for the 2019 Met Gala" },
+          { name: "Naomi Campbell", connection: "Longtime Versace supermodel since the 1990s" },
+          { name: "Gianni Versace", connection: "Donatella's brother, founder of the Versace fashion house" }
         ]
       }
     ]
@@ -407,51 +407,51 @@ const DAILY_PUZZLES = [
     end: "Queen Elizabeth II",
     steps: [
       {
-        correct: { name: "Martha Stewart", connection: "Best friends — co-hosted Martha & Snoop's Potluck Dinner Party" },
+        correct: { name: "Martha Stewart", connection: "Co-hosted Martha & Snoop's Potluck Dinner Party (2016–2020)" },
         decoys: [
-          { name: "Dr. Dre", connection: "Longtime collaborator since the '90s" },
-          { name: "Pharrell Williams", connection: "Collaborated on Drop It Like It's Hot" },
-          { name: "Wiz Khalifa", connection: "Fellow West Coast rapper" }
+          { name: "Dr. Dre", connection: "Produced Snoop's debut album Doggystyle (1993)" },
+          { name: "Pharrell Williams", connection: "Collaborated on 'Drop It Like It's Hot' (2004)" },
+          { name: "Eminem", connection: "Co-starred in the Up in Smoke Tour (2000)" }
         ]
       },
       {
-        correct: { name: "Justin Bieber", connection: "Martha famously roasted Bieber on Comedy Central" },
+        correct: { name: "Justin Bieber", connection: "Martha roasted Bieber on Comedy Central's Roast of Justin Bieber (2015)" },
         decoys: [
-          { name: "Ryan Reynolds", connection: "Guest on her cooking show" },
-          { name: "David Beckham", connection: "Both lifestyle brand moguls" },
-          { name: "Gordon Ramsay", connection: "Fellow TV cooking personality" }
+          { name: "Ellen DeGeneres", connection: "Frequent guest on The Ellen DeGeneres Show" },
+          { name: "Snoop Dogg", connection: "Co-hosted Martha & Snoop's Potluck Dinner Party" },
+          { name: "Kim Kardashian", connection: "Appeared together on The Apprentice (2005)" }
         ]
       },
       {
-        correct: { name: "Ed Sheeran", connection: "Bieber and Sheeran collaborated on 'I Don't Care' (2019)" },
+        correct: { name: "Ed Sheeran", connection: "Collaborated on 'I Don't Care' (2019)" },
         decoys: [
-          { name: "Drake", connection: "Fellow pop music superstar" },
-          { name: "Shawn Mendes", connection: "Fellow young pop artist" },
-          { name: "The Weeknd", connection: "Fellow chart-topping artist" }
+          { name: "Drake", connection: "Collaborated on 'Right Here' (2012)" },
+          { name: "Ludacris", connection: "Featured on 'Baby' (2010)" },
+          { name: "Usher", connection: "Usher discovered and mentored Bieber in 2008" }
         ]
       },
       {
-        correct: { name: "Elton John", connection: "Sheeran performed duets with Elton — Elton is his mentor" },
+        correct: { name: "Elton John", connection: "Sheeran recorded 'Merry Christmas' duet with Elton (2021)" },
         decoys: [
-          { name: "Paul McCartney", connection: "Fellow British music legend" },
-          { name: "Mick Jagger", connection: "Fellow iconic British rocker" },
-          { name: "Rod Stewart", connection: "Fellow British pop star" }
+          { name: "Taylor Swift", connection: "Collaborated on 'Everything Has Changed' (2012)" },
+          { name: "Beyoncé", connection: "Collaborated on 'Perfect Duet' (2017)" },
+          { name: "Eminem", connection: "Collaborated on 'River' (2017)" }
         ]
       },
       {
-        correct: { name: "Princess Diana", connection: "Elton performed 'Candle in the Wind' at her funeral (1997)" },
+        correct: { name: "Princess Diana", connection: "Elton performed 'Candle in the Wind' at Diana's funeral (1997)" },
         decoys: [
-          { name: "Prince Charles", connection: "Met Elton at many royal events" },
-          { name: "Prince William", connection: "Elton performed at his wedding" },
-          { name: "Camilla Parker Bowles", connection: "Attended Elton's events" }
+          { name: "Freddie Mercury", connection: "Close friends; both performed at Live Aid (1985)" },
+          { name: "John Lennon", connection: "Performed together at Madison Square Garden (1974)" },
+          { name: "Billie Jean King", connection: "Elton attended her tennis matches; lifelong friends" }
         ]
       },
       {
-        correct: { name: "Queen Elizabeth II", connection: "Diana's mother-in-law — the Queen" },
+        correct: { name: "Queen Elizabeth II", connection: "Diana's mother-in-law — Diana married Prince Charles in 1981" },
         decoys: [
-          { name: "Kate Middleton", connection: "Married into the royal family" },
-          { name: "Prince Philip", connection: "Diana's father-in-law" },
-          { name: "Margaret Thatcher", connection: "Prime Minister during Diana's era" }
+          { name: "Prince William", connection: "Diana's eldest son, born 1982" },
+          { name: "Prince Harry", connection: "Diana's youngest son, born 1984" },
+          { name: "Camilla Parker Bowles", connection: "Married Prince Charles in 2005" }
         ]
       }
     ]
@@ -464,49 +464,49 @@ const DAILY_PUZZLES = [
       {
         correct: { name: "Travis Kelce", connection: "In a relationship since 2023" },
         decoys: [
-          { name: "Ed Sheeran", connection: "Frequent musical collaborator" },
-          { name: "Joe Alwyn", connection: "Dated for six years" },
-          { name: "Harry Styles", connection: "Briefly dated in 2012" }
+          { name: "Ed Sheeran", connection: "Collaborated on 'Everything Has Changed' (2012)" },
+          { name: "Selena Gomez", connection: "Best friends since 2008, met as teenagers" },
+          { name: "Joe Alwyn", connection: "Dated from 2017 to 2023" }
         ]
       },
       {
-        correct: { name: "Jason Kelce", connection: "Travis's brother — fellow NFL legend" },
+        correct: { name: "Jason Kelce", connection: "Brothers — both NFL legends for the Chiefs and Eagles" },
         decoys: [
-          { name: "Patrick Mahomes", connection: "Teammate on the Kansas City Chiefs" },
-          { name: "Tom Brady", connection: "Fellow NFL superstar" },
-          { name: "Aaron Rodgers", connection: "Another NFL quarterback" }
+          { name: "Patrick Mahomes", connection: "Teammate on the Kansas City Chiefs since 2018" },
+          { name: "Donna Kelce", connection: "Travis's mother, famous for attending both sons' games" },
+          { name: "Andy Reid", connection: "Head coach of the Kansas City Chiefs" }
         ]
       },
       {
-        correct: { name: "Bradley Cooper", connection: "Both huge Philadelphia Eagles fans — celebrated together at games" },
+        correct: { name: "Bradley Cooper", connection: "Both passionate Philadelphia Eagles fans — celebrated the 2018 Super Bowl together" },
         decoys: [
-          { name: "Mark Wahlberg", connection: "Famous sports fan" },
-          { name: "Ryan Reynolds", connection: "Football team co-owner" },
-          { name: "Chris Pratt", connection: "Football enthusiast" }
+          { name: "Nick Foles", connection: "Teammate on the Eagles' Super Bowl LII-winning team (2018)" },
+          { name: "Jalen Hurts", connection: "Kelce's quarterback on the Eagles" },
+          { name: "Ryan Gosling", connection: "Both appeared in viral sports moments" }
         ]
       },
       {
         correct: { name: "Lady Gaga", connection: "Co-starred in A Star Is Born (2018)" },
         decoys: [
-          { name: "Jennifer Lawrence", connection: "Fellow Oscar-winning actress" },
-          { name: "Scarlett Johansson", connection: "Fellow A-list star" },
-          { name: "Margot Robbie", connection: "Fellow leading actress" }
+          { name: "Jennifer Lawrence", connection: "Co-starred in Silver Linings Playbook (2012)" },
+          { name: "Robert De Niro", connection: "Co-starred in Silver Linings Playbook (2012)" },
+          { name: "Sienna Miller", connection: "Co-starred in American Sniper (2014)" }
         ]
       },
       {
-        correct: { name: "Tony Bennett", connection: "Recorded two duet albums with Gaga — lifelong collaborators" },
+        correct: { name: "Tony Bennett", connection: "Recorded two duet albums: Cheek to Cheek (2014) and Love for Sale (2021)" },
         decoys: [
-          { name: "Frank Sinatra", connection: "Fellow legendary crooner" },
-          { name: "Andrea Bocelli", connection: "Famous duet partner" },
-          { name: "Michael Bublé", connection: "Fellow classic-style singer" }
+          { name: "Ariana Grande", connection: "Collaborated on 'Rain on Me' (2020)" },
+          { name: "Beyoncé", connection: "Both performed at the Super Bowl halftime show" },
+          { name: "Adam Driver", connection: "Co-starred in House of Gucci (2021)" }
         ]
       },
       {
-        correct: { name: "The White House", connection: "Bennett performed at The White House for multiple presidents" },
+        correct: { name: "The White House", connection: "Bennett performed at The White House for Presidents Kennedy, Clinton, and Obama" },
         decoys: [
-          { name: "The Pentagon", connection: "Famous D.C. building" },
-          { name: "Times Square", connection: "Iconic NYC landmark" },
-          { name: "Hollywood", connection: "Entertainment capital" }
+          { name: "Frank Sinatra", connection: "Close friends and fellow Rat Pack era icons" },
+          { name: "Central Park", connection: "Bennett recorded his famous 'I Left My Heart in San Francisco' (1962)" },
+          { name: "The Grammy Awards", connection: "Bennett won 20 Grammy Awards over his career" }
         ]
       }
     ]
@@ -517,51 +517,51 @@ const DAILY_PUZZLES = [
     end: "James Bond",
     steps: [
       {
-        correct: { name: "Daniel Craig", connection: "Adele sang 'Skyfall' — the theme for his Bond film" },
+        correct: { name: "Daniel Craig", connection: "Adele sang 'Skyfall' — the theme for Craig's Bond film (2012)" },
         decoys: [
-          { name: "Sam Smith", connection: "Also sang a Bond theme (Spectre)" },
-          { name: "Billie Eilish", connection: "Sang the theme for No Time to Die" },
-          { name: "Paul McCartney", connection: "Sang Live and Let Die" }
+          { name: "Sam Smith", connection: "Both sang Bond themes — Smith sang 'Writing's on the Wall' for Spectre (2015)" },
+          { name: "Billie Eilish", connection: "Both sang Bond themes — Eilish sang 'No Time to Die' (2020)" },
+          { name: "Paul McCartney", connection: "Both sang Bond themes — McCartney sang 'Live and Let Die' (1973)" }
         ]
       },
       {
-        correct: { name: "Rachel Weisz", connection: "Married to Craig since 2011" },
+        correct: { name: "Rachel Weisz", connection: "Married since 2011" },
         decoys: [
-          { name: "Sienna Miller", connection: "Fellow British actress" },
-          { name: "Kate Winslet", connection: "Fellow British star" },
-          { name: "Emma Watson", connection: "Fellow British talent" }
+          { name: "Rami Malek", connection: "Co-starred in No Time to Die (2021)" },
+          { name: "Javier Bardem", connection: "Co-starred in Skyfall (2012)" },
+          { name: "Halle Berry", connection: "Both starred in Bond films — Berry in Die Another Day (2002)" }
         ]
       },
       {
         correct: { name: "Ralph Fiennes", connection: "Co-starred in The Constant Gardener (2005)" },
         decoys: [
-          { name: "Liam Neeson", connection: "Fellow dramatic actor" },
-          { name: "Bill Nighy", connection: "Fellow British actor" },
-          { name: "Colin Firth", connection: "Fellow Oscar-winning Brit" }
+          { name: "Brendan Fraser", connection: "Co-starred in The Mummy (1999)" },
+          { name: "Hugh Jackman", connection: "Co-starred in The Fountain (2006)" },
+          { name: "Keanu Reeves", connection: "Co-starred in Constantine (2005)" }
         ]
       },
       {
-        correct: { name: "Judi Dench", connection: "Both played M in the Bond franchise" },
+        correct: { name: "Judi Dench", connection: "Both played M in the Bond franchise — Fiennes succeeded Dench as M" },
         decoys: [
-          { name: "Helen Mirren", connection: "Fellow Dame of British cinema" },
-          { name: "Maggie Smith", connection: "Fellow legendary British actress" },
-          { name: "Emma Thompson", connection: "Fellow acclaimed British actress" }
+          { name: "Liam Neeson", connection: "Co-starred in Schindler's List (1993)" },
+          { name: "Uma Thurman", connection: "Co-starred in The Avengers (1998, not Marvel)" },
+          { name: "Cate Blanchett", connection: "Co-starred in The English Patient (1996)" }
         ]
       },
       {
-        correct: { name: "Pierce Brosnan", connection: "Dench played M in all four of Brosnan's Bond films" },
+        correct: { name: "Pierce Brosnan", connection: "Dench played M in all four Brosnan Bond films (1995–2002)" },
         decoys: [
-          { name: "Sean Connery", connection: "The original Bond" },
-          { name: "Roger Moore", connection: "Played Bond in seven films" },
-          { name: "Timothy Dalton", connection: "Played Bond in the late '80s" }
+          { name: "Daniel Craig", connection: "Dench played M in Craig's first three Bond films" },
+          { name: "Ben Whishaw", connection: "Played Q alongside Dench's M in Skyfall (2012)" },
+          { name: "Ian Fleming", connection: "Fleming created the character M that Dench portrayed" }
         ]
       },
       {
         correct: { name: "James Bond", connection: "Brosnan played Agent 007 in four films (1995–2002)" },
         decoys: [
-          { name: "Jason Bourne", connection: "Another famous spy" },
-          { name: "Ethan Hunt", connection: "Tom Cruise's spy character" },
-          { name: "Indiana Jones", connection: "Iconic adventure hero" }
+          { name: "Rene Russo", connection: "Co-starred in The Thomas Crown Affair (1999)" },
+          { name: "Meryl Streep", connection: "Co-starred in Mamma Mia! (2008)" },
+          { name: "Robin Williams", connection: "Co-starred in Mrs. Doubtfire (1993)" }
         ]
       }
     ]
@@ -572,51 +572,51 @@ const DAILY_PUZZLES = [
     end: "NASA",
     steps: [
       {
-        correct: { name: "Whoopi Goldberg", connection: "Both starred in The Color Purple (1985)" },
+        correct: { name: "Whoopi Goldberg", connection: "Co-starred in The Color Purple (1985)" },
         decoys: [
-          { name: "Ellen DeGeneres", connection: "Fellow daytime TV icon" },
-          { name: "Dr. Phil", connection: "Got his start on Oprah's show" },
-          { name: "Gayle King", connection: "Oprah's best friend" }
+          { name: "Danny Glover", connection: "Co-starred in The Color Purple (1985)" },
+          { name: "Reese Witherspoon", connection: "Co-produced and co-starred in A Wrinkle in Time (2018)" },
+          { name: "David Letterman", connection: "Famous rival late-night host; appeared on each other's shows" }
         ]
       },
       {
-        correct: { name: "Patrick Stewart", connection: "Goldberg played Guinan on Star Trek: TNG" },
+        correct: { name: "Patrick Stewart", connection: "Goldberg played Guinan on Star Trek: The Next Generation (1988–1993)" },
         decoys: [
-          { name: "Robin Williams", connection: "Close friend and comedy partner" },
-          { name: "Billy Crystal", connection: "Co-hosted the Oscars" },
-          { name: "Ted Danson", connection: "Close friend and co-star" }
+          { name: "Robin Williams", connection: "Co-hosted Comic Relief charity specials (1986–1998)" },
+          { name: "Demi Moore", connection: "Co-starred in Ghost (1990)" },
+          { name: "Billy Crystal", connection: "Co-hosted Comic Relief charity specials (1986–1998)" }
         ]
       },
       {
-        correct: { name: "William Shatner", connection: "Both played legendary Star Trek captains" },
+        correct: { name: "William Shatner", connection: "Both played Star Trek captains — Stewart as Picard, Shatner as Kirk" },
         decoys: [
-          { name: "Ian McKellen", connection: "Co-starred in X-Men" },
-          { name: "Hugh Jackman", connection: "Fellow X-Men franchise star" },
-          { name: "James McAvoy", connection: "Played young Professor X" }
+          { name: "Ian McKellen", connection: "Co-starred in the X-Men franchise (2000–2014)" },
+          { name: "Hugh Jackman", connection: "Co-starred in X-Men (2000) and Logan (2017)" },
+          { name: "Brent Spiner", connection: "Co-starred as Data on Star Trek: TNG (1987–2002)" }
         ]
       },
       {
-        correct: { name: "Jeff Bezos", connection: "Shatner flew to space on Bezos's Blue Origin rocket (2021)" },
+        correct: { name: "Jeff Bezos", connection: "Shatner flew to space on Bezos's Blue Origin rocket in October 2021" },
         decoys: [
-          { name: "Richard Branson", connection: "Also flew to space in 2021" },
-          { name: "Mark Cuban", connection: "Fellow billionaire entrepreneur" },
-          { name: "Larry Page", connection: "Google co-founder" }
+          { name: "Leonard Nimoy", connection: "Co-starred as Spock on Star Trek (1966–2013)" },
+          { name: "Chris Pine", connection: "Both played Captain Kirk — Pine in the reboot films (2009–2016)" },
+          { name: "James Spader", connection: "Co-starred in Boston Legal (2004–2008)" }
         ]
       },
       {
-        correct: { name: "Elon Musk", connection: "Bezos and Musk run rival space companies (Blue Origin vs SpaceX)" },
+        correct: { name: "Elon Musk", connection: "Rival space entrepreneurs — Blue Origin vs SpaceX" },
         decoys: [
-          { name: "Bill Gates", connection: "Fellow tech billionaire" },
-          { name: "Mark Zuckerberg", connection: "Fellow tech mogul" },
-          { name: "Tim Cook", connection: "Apple CEO" }
+          { name: "Richard Branson", connection: "Flew to space on Virgin Galactic 9 days before Shatner's flight (2021)" },
+          { name: "MacKenzie Scott", connection: "Bezos's ex-wife, divorced in 2019" },
+          { name: "Andy Jassy", connection: "Succeeded Bezos as Amazon CEO in 2021" }
         ]
       },
       {
-        correct: { name: "NASA", connection: "SpaceX launches astronauts to the ISS under contract with NASA" },
+        correct: { name: "NASA", connection: "SpaceX launches astronauts to the ISS under NASA's Commercial Crew Program" },
         decoys: [
-          { name: "SpaceX", connection: "Musk's own space company" },
-          { name: "The Pentagon", connection: "Government defense HQ" },
-          { name: "MIT", connection: "Trained many engineers and astronauts" }
+          { name: "Tesla", connection: "Musk is CEO of Tesla, the electric car company" },
+          { name: "Twitter/X", connection: "Musk acquired Twitter for $44 billion in 2022" },
+          { name: "Grimes", connection: "Former partner; had children together" }
         ]
       }
     ]
