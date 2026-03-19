@@ -855,7 +855,7 @@ function renderOptions() {
   const grid = document.createElement('div'); grid.className = 'options-grid';
 
   const all = [{ ...step.correct, isCorrect: true }, ...step.decoys.map(d => ({ ...d, isCorrect: false }))];
-  const seed = (activePuzzle.id === 'tutorial' ? 999 : typeof activePuzzle.id === 'string' ? 888 + PRACTICE_PUZZLES.indexOf(activePuzzle) : getDaysSinceEpoch() * 100) + state.currentStep * 10;
+  const seed = (activePuzzle.id === 'tutorial' ? 999 : typeof activePuzzle.id === 'string' ? 888 + PRACTICE_PUZZLES.indexOf(activePuzzle) : (getDaysSinceEpoch() + 1) * 100) + state.currentStep * 10 + 7;
   const shuffled = seededShuffle(all, seed);
 
   const sg = state.guesses[state.currentStep] || [];
