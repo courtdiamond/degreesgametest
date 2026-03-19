@@ -272,6 +272,9 @@ let state = {
   currentStep: 0,
   misses: 0,
   guesses: [],       // array of arrays — per step, list of guesses (true/false)
+  undosLeft: 2,
+  hintsLeft: 1,
+  hinted: [],        // array of arrays — per step, list of hinted decoy names
   completed: false,
   won: false
 };

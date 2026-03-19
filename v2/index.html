@@ -6,7 +6,7 @@
   <title>Degree</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Password Gate -->
@@ -20,11 +20,44 @@
     </div>
   </div>
 
-  <div id="app" class="hidden">
+  <!-- Mode Selection -->
+  <div id="mode-select" class="screen hidden">
+    <h1 class="mode-title">DEGREE</h1>
+    <p class="mode-subtitle">How do you want to play?</p>
+    <div class="mode-cards">
+      <button class="mode-card" id="mode-tutorial">
+        <span class="mode-icon">🎓</span>
+        <span class="mode-name">Tutorial</span>
+        <span class="mode-desc">Learn how to play</span>
+      </button>
+      <button class="mode-card" id="mode-practice">
+        <span class="mode-icon">🏋️</span>
+        <span class="mode-name">Practice</span>
+        <span class="mode-desc">Play practice puzzles</span>
+      </button>
+      <button class="mode-card featured" id="mode-daily">
+        <span class="mode-icon">📅</span>
+        <span class="mode-name">Daily Degree</span>
+        <span class="mode-desc">Today's puzzle</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Practice Puzzle Selector -->
+  <div id="practice-select" class="screen hidden">
+    <div class="screen-header">
+      <button class="back-btn" id="practice-back">← Back</button>
+      <h2>Practice Puzzles</h2>
+    </div>
+    <div id="practice-list" class="practice-list"></div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="app" class="screen hidden">
     <!-- Header -->
     <header id="header">
       <div class="header-left">
-        <button id="help-btn" class="icon-btn" aria-label="How to play">?</button>
+        <button id="back-to-menu" class="icon-btn" aria-label="Back to menu">←</button>
       </div>
       <div class="header-center">
         <h1>DEGREE</h1>
@@ -33,6 +66,11 @@
         <button id="stats-btn" class="icon-btn" aria-label="Stats">📊</button>
       </div>
     </header>
+
+    <!-- Tutorial Tip Banner -->
+    <div id="tutorial-tip" class="hidden">
+      <p id="tutorial-tip-text"></p>
+    </div>
 
     <!-- Puzzle Number & Date -->
     <div id="puzzle-info">
@@ -43,22 +81,16 @@
 
     <!-- Game Board -->
     <div id="game-board">
-      <!-- Start Node -->
       <div id="start-node" class="chain-node endpoint">
         <span class="node-name" id="start-name">Loading...</span>
       </div>
-
-      <div id="chain-container">
-        <!-- Chain steps and option cards are injected here by JS -->
-      </div>
-
-      <!-- End Node -->
+      <div id="chain-container"></div>
       <div id="end-node" class="chain-node endpoint">
         <span class="node-name" id="end-name">Loading...</span>
       </div>
     </div>
 
-    <!-- Action Bar (Undo + Hint) -->
+    <!-- Action Bar -->
     <div id="action-bar">
       <button id="undo-btn" class="tool-btn" disabled>
         ↩ Undo <span id="undo-count">(2)</span>
@@ -81,6 +113,7 @@
         <p id="game-over-subtitle">You found the chain</p>
         <div id="share-preview"></div>
         <button id="share-btn" class="action-btn">Share Result 📋</button>
+        <button id="back-menu-btn" class="secondary-btn">Back to Menu</button>
         <button id="close-overlay-btn" class="secondary-btn">Close</button>
       </div>
     </div>
