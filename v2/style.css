@@ -430,7 +430,7 @@ body::after {
   align-items: center;
   gap: 0;
   flex: 1;
-  padding-bottom: 10px;
+  padding-bottom: 90px;
 }
 
 /* ===== Chain Nodes ===== */
@@ -638,10 +638,16 @@ body::after {
 /* ===== Action Bar ===== */
 #action-bar {
   width: 100%;
+  max-width: var(--max-width);
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding: 8px 0 4px;
+  padding: 8px 16px;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
 }
 
 .tool-btn {
@@ -678,11 +684,19 @@ body::after {
 /* ===== Misses Bar ===== */
 #misses-bar {
   width: 100%;
+  max-width: var(--max-width);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 12px 0 20px;
+  padding: 6px 16px 8px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  z-index: 50;
 }
 
 .misses-label {
