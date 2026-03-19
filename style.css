@@ -1,0 +1,607 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #121213;
+  --surface: #1a1a1b;
+  --tile: #3a3a3c;
+  --tile-hover: #4a4a4c;
+  --correct: #538d4e;
+  --correct-light: #6aaa64;
+  --wrong: #b55151;
+  --text: #ffffff;
+  --text-dim: #818384;
+  --accent: #d4af37;
+  --accent-dim: #a68a2a;
+  --border: #3a3a3c;
+  --overlay-bg: rgba(0, 0, 0, 0.85);
+  --radius: 10px;
+  --max-width: 500px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app.hidden {
+  display: none;
+}
+
+/* ===== Header ===== */
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+#header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: var(--accent);
+}
+
+.header-left, .header-right {
+  width: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.icon-btn:hover {
+  background: var(--tile);
+  border-color: var(--text-dim);
+}
+
+/* ===== Puzzle Info ===== */
+#puzzle-info {
+  padding: 10px 0 16px;
+  font-size: 14px;
+  color: var(--text-dim);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  font-size: 18px;
+}
+
+/* ===== Game Board ===== */
+#game-board {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  padding-bottom: 20px;
+}
+
+/* ===== Chain Nodes ===== */
+.chain-node {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  position: relative;
+}
+
+.chain-node.endpoint {
+  background: var(--surface);
+  border: 2px solid var(--accent);
+}
+
+.chain-node.endpoint .node-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+/* Completed chain step */
+.chain-step {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chain-connector {
+  width: 2px;
+  height: 24px;
+  background: var(--tile);
+  position: relative;
+}
+
+.chain-connector.active {
+  background: var(--correct);
+}
+
+.chain-connector::after {
+  content: '▼';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+  color: inherit;
+}
+
+.chain-connector.active::after {
+  color: var(--correct);
+}
+
+.completed-node {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--correct);
+  border-radius: var(--radius);
+  text-align: center;
+  animation: slideIn 0.4s ease;
+}
+
+.completed-node .node-name {
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+}
+
+.completed-node .node-connection {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 2px;
+  display: block;
+}
+
+/* Revealed node (game over - loss) */
+.completed-node.revealed {
+  background: var(--tile);
+  border: 1px dashed var(--text-dim);
+}
+
+/* ===== Options Area ===== */
+.options-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.option-card {
+  background: var(--tile);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 14px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 80px;
+  justify-content: center;
+}
+
+.option-card:hover:not(.disabled):not(.wrong) {
+  background: var(--tile-hover);
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+.option-card:active:not(.disabled):not(.wrong) {
+  transform: translateY(0);
+}
+
+.option-card .option-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.option-card .option-hint {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.3;
+}
+
+.option-card.wrong {
+  background: var(--wrong);
+  opacity: 0.4;
+  cursor: not-allowed;
+  animation: shake 0.4s ease;
+  border-color: transparent;
+}
+
+.option-card.disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* ===== Misses Bar ===== */
+#misses-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 0 24px;
+}
+
+.misses-label {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#misses-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.miss-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--tile);
+  border: 1px solid var(--text-dim);
+  transition: all 0.3s ease;
+}
+
+.miss-dot.used {
+  background: var(--wrong);
+  border-color: var(--wrong);
+  animation: pop 0.3s ease;
+}
+
+/* ===== Overlays ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.25s ease;
+  padding: 20px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-content h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.overlay-content p {
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Help overlay */
+.help-steps {
+  text-align: left;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.help-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.step-num {
+  background: var(--accent);
+  color: var(--bg);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.help-example {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.help-example p {
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.example-chain {
+  color: var(--accent) !important;
+  font-weight: 600;
+  font-size: 13px !important;
+}
+
+.example-why {
+  font-size: 12px !important;
+  color: var(--text-dim) !important;
+}
+
+/* Stats overlay */
+#stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Game over */
+#share-preview {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 16px 0;
+  font-family: monospace;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  white-space: pre-line;
+}
+
+/* Buttons */
+.action-btn {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.action-btn:hover {
+  background: var(--accent-dim);
+}
+
+.secondary-btn {
+  background: none;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.secondary-btn:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+/* ===== Toast ===== */
+.toast {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 200;
+  animation: fadeIn 0.2s ease;
+  pointer-events: none;
+}
+
+/* ===== Password Gate ===== */
+#password-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#password-gate.hidden {
+  display: none;
+}
+
+.gate-content {
+  text-align: center;
+  max-width: 340px;
+  width: 100%;
+}
+
+.gate-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.gate-subtitle {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+#gate-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 16px;
+  font-family: var(--font);
+  text-align: center;
+  letter-spacing: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 12px;
+}
+
+#gate-input:focus {
+  border-color: var(--accent);
+}
+
+#gate-input::placeholder {
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.gate-error {
+  color: var(--wrong);
+  font-size: 13px;
+  margin-top: 8px;
+  min-height: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 400px) {
+  #header h1 {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+
+  .option-card {
+    padding: 10px 8px;
+    min-height: 68px;
+  }
+
+  .option-card .option-name {
+    font-size: 13px;
+  }
+
+  .overlay-content {
+    padding: 24px 20px;
+  }
+}

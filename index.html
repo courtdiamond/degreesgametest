@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Degree</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Password Gate -->
+  <div id="password-gate">
+    <div class="gate-content">
+      <h1 class="gate-title">DEGREE</h1>
+      <p class="gate-subtitle">Enter the password to play</p>
+      <input type="password" id="gate-input" placeholder="Password" autocomplete="off" />
+      <button id="gate-btn" class="action-btn">Enter</button>
+      <p id="gate-error" class="gate-error"></p>
+    </div>
+  </div>
+
+  <div id="app" class="hidden">
+    <!-- Header -->
+    <header id="header">
+      <div class="header-left">
+        <button id="help-btn" class="icon-btn" aria-label="How to play">?</button>
+      </div>
+      <div class="header-center">
+        <h1>DEGREE</h1>
+      </div>
+      <div class="header-right">
+        <button id="stats-btn" class="icon-btn" aria-label="Stats">📊</button>
+      </div>
+    </header>
+
+    <!-- Puzzle Number & Date -->
+    <div id="puzzle-info">
+      <span id="puzzle-number">#1</span>
+      <span class="dot">·</span>
+      <span id="puzzle-date">Mar 19, 2026</span>
+    </div>
+
+    <!-- Game Board -->
+    <div id="game-board">
+      <!-- Start Node -->
+      <div id="start-node" class="chain-node endpoint">
+        <span class="node-name" id="start-name">Loading...</span>
+      </div>
+
+      <div id="chain-container">
+        <!-- Chain steps and option cards are injected here by JS -->
+      </div>
+
+      <!-- End Node -->
+      <div id="end-node" class="chain-node endpoint">
+        <span class="node-name" id="end-name">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Misses Indicator -->
+    <div id="misses-bar">
+      <span class="misses-label">Misses</span>
+      <div id="misses-dots"></div>
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div id="game-over" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 id="game-over-title">🎉 Connected!</h2>
+        <p id="game-over-subtitle">You found the chain</p>
+        <div id="share-preview"></div>
+        <button id="share-btn" class="action-btn">Share Result 📋</button>
+        <button id="close-overlay-btn" class="secondary-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- How to Play Overlay -->
+    <div id="help-overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <h2>How to Play</h2>
+        <p>Connect two seemingly unrelated people or things by finding the hidden chain between them.</p>
+        <div class="help-steps">
+          <div class="help-step">
+            <span class="step-num">1</span>
+            <span>You'll see a <strong>start</strong> and an <strong>end</strong> — your job is to connect them.</span>
+          </div>
+          <div class="help-step">
+            <span class="step-num">2</span>
+            <span>At each step, pick from <strong>4 options</strong>. One is the correct link in the chain.</span>
+          </div>
+          <div class="help-step">
+            <span class="step-num">3</span>
+            <span>Wrong picks are eliminated and count as a <strong>miss</strong>.</span>
+          </div>
+          <div class="help-step">
+            <span class="step-num">4</span>
+            <span><strong>4 misses</strong> and the game is over — the chain is revealed.</span>
+          </div>
+        </div>
+        <div class="help-example">
+          <p><strong>Example:</strong></p>
+          <p class="example-chain">Leonardo DiCaprio → <em>Kate Winslet</em> → <em>Hugh Jackman</em> → Elmo</p>
+          <p class="example-why">DiCaprio & Winslet co-starred in Titanic, Winslet & Jackman co-starred together, Jackman appeared on Sesame Street!</p>
+        </div>
+        <button id="close-help-btn" class="action-btn">Got it!</button>
+      </div>
+    </div>
+
+    <!-- Stats Overlay -->
+    <div id="stats-overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <h2>Statistics</h2>
+        <div id="stats-grid">
+          <div class="stat-box">
+            <div class="stat-value" id="stat-played">0</div>
+            <div class="stat-label">Played</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value" id="stat-win-pct">0</div>
+            <div class="stat-label">Win %</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value" id="stat-streak">0</div>
+            <div class="stat-label">Streak</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value" id="stat-max-streak">0</div>
+            <div class="stat-label">Max Streak</div>
+          </div>
+        </div>
+        <button id="close-stats-btn" class="secondary-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
